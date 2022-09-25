@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Slabo+27px&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/*---------------Menu------------*/
+.menu{
+    
+    background: #00000062;
+    /*background: linear-gradient(90deg,#99f8af 0%, #f3ff00 80%);
+    background: -webkit-linear-gradient(90deg,#99f8af 0%, #f3ff00 80%);
+    background: -moz-linear-gradient(90deg,#99f8af 0%, #f3ff00 80%);*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    display: grid;
+    width: 15%;
+   transition: transform 2s;
+}
+.logo:hover{
+    transform: rotate(360deg);
+ 
+}
+
+.dropdown-item{
+    font-size: 20px;
+}
+/*---------------Main-index------------*/
+.Descrip{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/index.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: antiquewhite;
+     font-family: 'Anton', sans-serif;
+
+     font-family: 'Pacifico', cursive;
+ 
+     font-family: 'Slabo 27px', serif;
+     font-size: 40px;
+     display: flex;
+     flex-wrap: nowrap;
+     flex-direction: column;
+     
+    
+}
+
+.Barra{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+/*---------------CURSOS-----------------*/
+.Cursos{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/curso-bartender.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.Card1{
+    display: flex;
+    margin-left: 50px;
+    justify-content: flex-start;
+    
+}
+#Inicial{
+    width:100vw;
+    height:100vh;
+   background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/Inicial.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+}
+#Inicial-Texto{
+    font-family: 'Anton', sans-serif;
+
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Slabo 27px', serif;
+    font-size: 40px;
+}
+#Avanzado{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/Avanzado.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+   color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titulo__galeria{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+/*----------------Galeria-----------------------*/
+h1{
+    background-color: #8f428b9c;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 50px;
+}
+
+.contenedor
+
+
+
+.linea{
+    background: #550b51;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0,0,0,.5) ;
+}
+
+
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+    filter:blur(2px);
+    transform: rotate(10deg) scale(1.3);
+
+}
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.light-box img{
+    width: 80vw;
+    
+
+}
+.light-box:target{
+    transform: scale(1);
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top:40px;
+    right: 40px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background: black;
+    color: white;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+
+
+}
+
+/*----------------- FINALIZA GALERIA--------------------*/
+
+/*----------------- COMIENZO Contacto--------------------*/
+.Contacto-c {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logoc {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logoc span {
+    color: #B70E21;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+
+
+.Descripcion{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/index.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: antiquewhite;
+     font-family: 'Anton', sans-serif;
+
+     font-family: 'Pacifico', cursive;
+ 
+     font-family: 'Slabo 27px', serif;
+     font-size: 30px;
+     display: flex;
+     flex-wrap: nowrap;
+     flex-direction: column;
+     
+    
+}
+
+/*---------------PIE DE PAGINA-----------------*/
+.RedesSociales{
+    height: 10vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 37%, rgba(255,255,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5PX;
+    
+  
+    
+}
+.IG{
+    padding-left: 5PX;
+    transition: transform 2s;
+    margin-right: 50px;
+}
+
+.IG:hover{
+    transform: rotate(360deg);
+}
+.Face{
+    padding-left: 5PX;
+    transition: transform 2s;
+    margin-right: 50px;
+}
+
+.Face:hover{
+    transform: rotate(360deg);
+}
+.Wtsp{
+    padding-left: 5PX;
+    transition: transform 2s;
+    margin-right: 50px;
+}
+
+.Wtsp:hover{
+    transform: rotate(360deg);
+}
+
+
+
+@media screen and (max-width: 600px){
+    .menu{
+        
+        display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+  
+
+
+    .Cursos{
+        width: 100vw;
+        height: auto;
+        display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+        /*justify-content: space-around;*/
+    }
+  
+    .Card1{
+        height: auto;
+        display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .Card2{
+        height: auto;
+        display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+         /*justify-content: space-around;*/
+    }
+
+    .Descrip{
+       
+        color: antiquewhite;
+         font-family: 'Anton', sans-serif;
+    
+         font-family: 'Pacifico', cursive;
+     
+         font-family: 'Slabo 27px', serif;
+         font-size: 50px;
+        
+    }
+    .Descripcion{
+        width:100vw;
+        height:100vh;
+        background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)), url("../Galeria/index.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        color: antiquewhite;
+         font-family: 'Anton', sans-serif;
+    
+         font-family: 'Pacifico', cursive;
+     
+         font-family: 'Slabo 27px', serif;
+         font-size: 20px;
+         display: flex;
+         flex-wrap: nowrap;
+         flex-direction: column;
+         
+        
+    }
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .close{
+        top:20px;
+        right: 20px;
+    }
+
+}
+
+@media(min-width: 700px) {
+ 
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
